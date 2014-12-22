@@ -12,10 +12,13 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="format-detection" content="telephone=no" />
         <title>XHTML Email Boilerplate</title>
         <style type="text/css">
             body {
                 mso-line-height-rule: exactly;
+                -webkit-text-size-adjust: none;
+                -ms-text-size-adjust: none;
             }
             a {
                 mso-line-height-rule: exactly;
@@ -27,12 +30,38 @@
                 mso-table-rspace: 0pt;
             }
 
-            @media only screen and (max-width:480px) {
-                
+            div[class=mobile_only] {
+                display: none;
+                height: 0;
+                max-height: 0;
+                overflow: hidden;
+                mso-hide: all;
             }
 
-            @media only screen and (min-width:481px) and (max-width:599px) {
-                
+            @media only screen and (max-width:480px) {
+                div[class=desktop_only],
+                div[class="mobile_only screen_max_640"] {
+                    display: none;
+                }
+                div[class="mobile_only screen_max_480"] {
+                    display: block;
+                    height: auto;
+                    max-height: none;
+                    overflow: visible;
+                }
+            }
+
+            @media only screen and (min-width:481px) and (max-width:640px) {
+                div[class=desktop_only],
+                div[class="mobile_only screen_max_480"] {
+                    display: none;
+                }
+                div[class="mobile_only screen_max_640"] {
+                    display: block;
+                    height: auto;
+                    max-height: none;
+                    overflow: visible;
+                }
             }
         </style>
     </head>
