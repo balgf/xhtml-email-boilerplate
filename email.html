@@ -35,19 +35,24 @@
                 height: 0;
                 max-height: 0;
                 overflow: hidden;
-                mso-hide: all;
             }
 
             @media only screen and (max-width:480px) {
                 div[class=desktop_only],
                 div[class="mobile_only screen_max_640"] {
                     display: none;
+                    height: 0;
+                    max-height: 0;
+                    overflow: hidden;
                 }
                 div[class="mobile_only screen_max_480"] {
-                    display: block;
-                    height: auto;
-                    max-height: none;
-                    overflow: visible;
+                    display: block !important;
+                    height: auto !important;
+                    max-height: none !important;
+                    overflow: visible !important;
+                }
+                div[class="mobile_only screen_max_480"] table {
+                    display: table !important;
                 }
             }
 
@@ -55,12 +60,18 @@
                 div[class=desktop_only],
                 div[class="mobile_only screen_max_480"] {
                     display: none;
+                    height: 0;
+                    max-height: 0;
+                    overflow: hidden;
                 }
                 div[class="mobile_only screen_max_640"] {
-                    display: block;
-                    height: auto;
-                    max-height: none;
-                    overflow: visible;
+                    display: block !important;
+                    height: auto !important;
+                    max-height: none !important;
+                    overflow: visible !important;
+                }
+                div[class="mobile_only screen_max_640"] table {
+                    display: table !important;
                 }
             }
         </style>
